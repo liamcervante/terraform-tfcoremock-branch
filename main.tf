@@ -4,14 +4,6 @@ terraform {
       source = "hashicorp/tfcoremock"
     }
   }
-
-#   testing {
-#     module_registry_source = "app.terraform.io/liamcervante/simple-copy/tfcoremock"
-#   }
-}
-
-variable "number" {
-    type = number
 }
 
 data "tfcoremock_simple_resource" "external" {

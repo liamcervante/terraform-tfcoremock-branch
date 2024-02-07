@@ -26,12 +26,7 @@ run "test" {
   providers = {
     tfcoremock = tfcoremock
   }
-
-  assert {
-    condition = var.number == 2004
-    error_message = "wrong variable"
-  }
-
+  
   assert {
     condition     = tfcoremock_simple_resource.internal.string == run.setup.string
     error_message = "String value was not copied correctly."
