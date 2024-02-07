@@ -18,7 +18,6 @@ run "setup" {
 }
 
 run "test" {
-
   variables {
     id = run.setup.id
   }
@@ -26,7 +25,7 @@ run "test" {
   providers = {
     tfcoremock = tfcoremock
   }
-  
+
   assert {
     condition     = tfcoremock_simple_resource.internal.string == run.setup.string
     error_message = "String value was not copied correctly."
